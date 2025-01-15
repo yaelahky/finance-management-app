@@ -1,7 +1,10 @@
 # Finance Management App
 
 This is a React Native project for development purposes only. This application is designed to help users manage their finances efficiently.
-<img height="361" alt="Screenshot 2025-01-15 at 11 45 11" src="https://github.com/user-attachments/assets/40ff09bc-8921-42e2-9200-e98bbebf292d" />
+
+# Demo
+
+<img height="400" alt="Screenshot 2025-01-15 at 11 45 11" src="https://github.com/user-attachments/assets/40ff09bc-8921-42e2-9200-e98bbebf292d" />
 
 ## Prerequisites
 
