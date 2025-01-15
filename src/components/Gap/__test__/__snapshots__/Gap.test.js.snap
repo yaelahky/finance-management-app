@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gap should render Gap correctly 1`] = `
+<View
+  style={
+    Object {
+      "height": 0,
+      "width": 0,
+    }
+  }
+/>
+`;
