@@ -2,6 +2,10 @@
 
 This is a React Native project for development purposes only. This application is designed to help users manage their finances efficiently.
 
+# Demo
+
+<img height="400" alt="Screenshot 2025-01-15 at 11 45 11" src="https://github.com/user-attachments/assets/40ff09bc-8921-42e2-9200-e98bbebf292d" />
+
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
@@ -13,7 +17,7 @@ Before you begin, ensure you have met the following requirements:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/FinanceManagement.git
+   git clone [https://github.com/yourusername/FinanceManagement.git](https://github.com/yaelahky/finance-management-app)
    ```
 2. Navigate to the project directory:
    ```bash
