@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity, FlatList, Dimensions } from 'react-native';
-import { currencyParser, getScreenHeight, getScreenWidth, getStatusBarHeightByOS } from './src/utils/helpers';
+import React from 'react';
+import { Text, View, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
+import { currencyParser, getScreenWidth, getStatusBarHeightByOS } from './src/utils/helpers';
 import { Gap } from './src/components';
 import moment from 'moment';
 import { PieChart } from 'react-native-chart-kit';
@@ -29,6 +29,18 @@ const dummyData = [
   { id: 20, type: 'expense', category: 'transportation', amount: 25000, datetime: '2023-01-20T08:30:00Z', description: 'Bus fare' }
 ];
 
+/**
+ * Processes financial data to generate totals for a pie chart.
+ *
+ * @param {Array} data - The array of financial data objects.
+ * @param {string} data[].type - The type of the financial entry ('income' or 'expense').
+ * @param {number} data[].amount - The amount of the financial entry.
+ * @returns {Array} An array of objects representing the pie chart data.
+ * @returns {string} returns[].name - The name of the pie chart segment ('Penghasilan' or 'Pengeluaran').
+ * @returns {number} returns[].amount - The total amount for the pie chart segment.
+ * @returns {string} returns[].color - The color associated with the pie chart segment.
+ */
+
 const processDataForPieChart = (data) => {
   const totals = data.reduce(
     (acc, item) => {
@@ -46,23 +58,7 @@ const processDataForPieChart = (data) => {
 
 
 const App = () => {
-  const [transactions, setTransactions] = useState(dummyData);
   const pieData = processDataForPieChart(dummyData);
-
-
-  const addTransaction = (newTransaction) => {
-    setTransactions([...transactions, newTransaction]);
-  };
-
-  const deleteTransaction = (id) => {
-    setTransactions(transactions.filter(transaction => transaction.id !== id));
-  };
-
-  const editTransaction = (id, updatedTransaction) => {
-    setTransactions(transactions.map(transaction =>
-      transaction.id === id ? { ...transaction, ...updatedTransaction } : transaction
-    ));
-  };
 
   return (
     <View style={styles.container}>
